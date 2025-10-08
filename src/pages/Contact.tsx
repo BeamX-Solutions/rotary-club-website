@@ -63,34 +63,28 @@ const Contact = () => {
 
   const rotaryContacts = [
     {
+      name: 'RTN. AFOLABI OLUFUNMILAYO',
+      phone: '+234 802 320 9322'
+    },
+    {
       name: 'RTN. AGNES',
-      phone: '+234 814 901 7989',
-      role: 'Project Coordinator'
-    },
-    {
-      name: 'RTN. BUSAYO OWAH',
-      phone: '+234 703 497 0389',
-      role: 'Sales Manager'
-    },
-    {
-      name: 'RTN. OBINNA NWEKE',
-      phone: '+234 816 471 1076',
-      role: 'Investment Advisor'
+      phone: '+234 814 901 7989'
     },
     {
       name: 'RTN. AKINLABI AKINTAYO',
-      phone: '+234 809 843 4810',
-      role: 'Business Development'
+      phone: '+234 809 843 4810'
+    },
+    {
+      name: 'RTN. BUSAYO OWAH',
+      phone: '+234 703 497 0389'
+    },
+    {
+      name: 'RTN. OBINNA NWEKE',
+      phone: '+234 816 471 1076'
     },
     {
       name: 'RTN. VICTOR ITOTOI',
-      phone: '+234 913 779 7198',
-      role: 'Client Relations'
-    },
-    {
-      name: 'RTN. AFOLABI OLUFUNMILAYO',
-      phone: '+234 802 320 9322',
-      role: 'Documentation'
+      phone: '+234 913 779 7198'
     }
   ];
 
@@ -255,9 +249,8 @@ const Contact = () => {
                       <div key={index} className="flex items-center justify-between p-3 bg-secondary/30 rounded-lg">
                         <div>
                           <p className="font-medium text-primary text-sm">{contact.name}</p>
-                          <p className="text-xs text-muted-foreground">{contact.role}</p>
                         </div>
-                        <a 
+                        <a
                           href={`tel:${contact.phone}`}
                           className="text-accent hover:text-accent-hover transition-colors font-medium text-sm"
                         >

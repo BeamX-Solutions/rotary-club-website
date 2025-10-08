@@ -22,10 +22,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src="/images/rotary-logo.png" 
-              alt="Rotary Club of Lekki Golden" 
-              className="h-24 md:h-28 w-auto"
+            <img
+              src="/images/traberg-logo-3.png"
+              alt="Traberg - Architects, Builders, Construction Managers"
+              className="h-16 md:h-20 w-auto"
             />
           </Link>
 
