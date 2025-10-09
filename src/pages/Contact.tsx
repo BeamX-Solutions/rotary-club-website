@@ -15,7 +15,10 @@ import {
   User, 
   MessageSquare,
   Calendar,
-  Banknote
+  Banknote,
+  FileText,
+  Building2,
+  DollarSign
 } from 'lucide-react';
 
 const Contact = () => {
@@ -63,28 +66,86 @@ const Contact = () => {
 
   const rotaryContacts = [
     {
-      name: 'RTN. AFOLABI OLUFUNMILAYO',
-      phone: '+234 802 320 9322'
-    },
-    {
-      name: 'RTN. AGNES',
-      phone: '+234 814 901 7989'
-    },
-    {
       name: 'RTN. AKINLABI AKINTAYO',
-      phone: '+234 809 843 4810'
+      title: 'Technical Director, TRABERG Construction',
+      phones: ['+234 (0) 8165423226', '+234 (0) 9137797198']
     },
     {
       name: 'RTN. BUSAYO OWAH',
-      phone: '+234 703 497 0389'
+      title: 'CEO, KORRECT HOMES',
+      phones: ['+234 (0) 8149017989', '+234 (0) 8060340863']
+    },
+    {
+      name: 'RTN. AFOLABI OLUFUNMILAYO',
+      title: 'Secretary, RC Lekki Golden',
+      phones: ['+234 (0) 7019080535']
     },
     {
       name: 'RTN. OBINNA NWEKE',
-      phone: '+234 816 471 1076'
+      title: 'Principal Consultant, BEAMX Solution',
+      phones: ['+234 (0) 8164711076']
     },
     {
       name: 'RTN. VICTOR ITOTOI',
-      phone: '+234 913 779 7198'
+      title: 'Membership Chair, RC Falomo',
+      phones: ['+234 (0) 8023209322', '+1 (414) 350-6035']
+    },
+    {
+      name: 'RTN. AGNES',
+      title: 'Youth Service Chair, RC Lekki Golden',
+      phones: ['+234 (0) 7034970389']
+    }
+  ];
+
+  const paymentInfo = [
+    {
+      icon: Building2,
+      title: '3-Bedroom Duplex',
+      details: [
+        { label: 'Off-Plan Price', value: '₦65M' },
+        { label: 'Initial Deposit', value: '₦5M' },
+        { label: 'Full Payment', value: '₦70M' },
+        { label: 'Payment Duration', value: '16-18 Months' },
+        { label: 'Monthly Payment', value: '₦3.3M' },
+        { label: 'Interest Rate', value: 'Zero Interest' },
+        { label: 'Units Available', value: '32 Units' }
+      ]
+    },
+    {
+      icon: Building2,
+      title: '4-Bedroom Duplex',
+      details: [
+        { label: 'Off-Plan Price', value: '₦75M' },
+        { label: 'Initial Deposit', value: '₦15M' },
+        { label: 'Full Payment', value: '₦80M' },
+        { label: 'Payment Duration', value: '16-18 Months' },
+        { label: 'Monthly Payment', value: '₦3.6M' },
+        { label: 'Interest Rate', value: 'Zero Interest' },
+        { label: 'Units Available', value: '2 Units' }
+      ]
+    }
+  ];
+
+  const documentInfo = [
+    {
+      title: 'What You Receive',
+      items: [
+        'Receipt of payment',
+        'Survey Plan (Registered)',
+        'Deed of Assignment',
+        'Certificate of Occupancy (C of O) in view',
+        'Contract of Sale'
+      ]
+    },
+    {
+      title: 'Payment Details',
+      items: [
+        'Bank: PROVIDUS BANK',
+        'Account Number: 1308280039',
+        'Account Name: ROTARY WHEEL\'S COURT',
+        'Payment Plans: 16-18 Months',
+        'Zero Interest Option Available'
+      ]
     }
   ];
 
@@ -111,6 +172,10 @@ const Contact = () => {
                 <Banknote className="w-4 h-4 mr-2" />
                 Flexible Payment Plans
               </Badge>
+              <Badge className="bg-white/20 text-white text-sm px-4 py-2">
+                <FileText className="w-4 h-4 mr-2" />
+                Oct 2025 - Nov 2025 Offer
+              </Badge>
             </div>
           </div>
         </div>
@@ -119,7 +184,7 @@ const Contact = () => {
       {/* Main Content */}
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Contact Form */}
             <div>
               <Card className="shadow-luxury">
@@ -182,8 +247,8 @@ const Contact = () => {
                           onChange={(e) => handleInputChange('propertyType', e.target.value)}
                         >
                           <option value="">Select property type</option>
-                          <option value="3-bedroom">3 Bedroom Terraced Duplex</option>
-                          <option value="4-bedroom">4 Bedroom Semi-Detached</option>
+                          <option value="3-bedroom">3 Bedroom Terraced Duplex (₦65M)</option>
+                          <option value="4-bedroom">4 Bedroom Semi-Detached (₦75M)</option>
                           <option value="both">Both Property Types</option>
                         </select>
                       </div>
@@ -225,39 +290,12 @@ const Contact = () => {
                     Addo Road, Ajah, Lekki<br />
                     Lagos State, Nigeria
                   </p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Accessibility:</strong> Central to shopping malls, schools, fuel stations, and essential infrastructure
+                  </p>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="w-4 h-4 mr-2" />
                     Site visits available by appointment
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Rotary Team Contacts */}
-              <Card className="shadow-elegant">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-primary flex items-center">
-                    <Phone className="w-5 h-5 mr-2 text-accent" />
-                    Rotary Team Contacts
-                  </CardTitle>
-                  <p className="text-muted-foreground text-sm">
-                    Speak directly with our Rotary project team members
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 gap-4">
-                    {rotaryContacts.map((contact, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-secondary/30 rounded-lg">
-                        <div>
-                          <p className="font-medium text-primary text-sm">{contact.name}</p>
-                        </div>
-                        <a
-                          href={`tel:${contact.phone}`}
-                          className="text-accent hover:text-accent-hover transition-colors font-medium text-sm"
-                        >
-                          {contact.phone}
-                        </a>
-                      </div>
-                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -285,13 +323,131 @@ const Contact = () => {
                     </li>
                     <li className="flex items-center">
                       <div className="w-1 h-1 bg-accent rounded-full mr-3" />
-                      Completion guaranteed by 2025
+                      Completion guaranteed by February 2027
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
           </div>
+
+          {/* Pricing Information */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Payment Plans & Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {paymentInfo.map((property, index) => (
+                <Card key={index} className="shadow-elegant">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold text-primary flex items-center">
+                      <property.icon className="w-5 h-5 mr-2 text-accent" />
+                      {property.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      {property.details.map((detail, idx) => (
+                        <div key={idx} className="flex justify-between items-center pb-2 border-b border-secondary">
+                          <span className="text-sm text-muted-foreground">{detail.label}</span>
+                          <span className="font-semibold text-primary">{detail.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Documentation & Payment Details */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Documentation & Payment</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {documentInfo.map((section, index) => (
+                <Card key={index} className="shadow-elegant">
+                  <CardHeader>
+                    <CardTitle className="text-lg font-bold text-primary flex items-center">
+                      <FileText className="w-5 h-5 mr-2 text-accent" />
+                      {section.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {section.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="text-accent mr-3 font-bold">✓</span>
+                          <span className="text-sm text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Rotary Team Contacts */}
+          <section className="mb-16">
+            <Card className="shadow-luxury">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-primary flex items-center">
+                  <Phone className="w-6 h-6 mr-2 text-accent" />
+                  Rotary Team Contacts
+                </CardTitle>
+                <p className="text-muted-foreground">
+                  Speak directly with our Rotary project team members for personalized assistance
+                </p>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {rotaryContacts.map((contact, index) => (
+                    <div key={index} className="p-4 bg-secondary/30 rounded-lg border border-secondary/50">
+                      <p className="font-bold text-primary text-sm mb-1">{contact.name}</p>
+                      <p className="text-xs text-accent mb-3">{contact.title}</p>
+                      <div className="space-y-2">
+                        {contact.phones.map((phone, phoneIdx) => (
+                          <a
+                            key={phoneIdx}
+                            href={`tel:${phone}`}
+                            className="text-accent hover:text-accent-hover transition-colors font-medium text-sm block"
+                          >
+                            {phone}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Special Offer Banner */}
+          <Card className="bg-gradient-luxury text-white shadow-luxury">
+            <CardContent className="p-8">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-2">Special Off-Plan Offer</h3>
+                <p className="text-white/90 mb-4">
+                  Limited time offer: October 2025 - November 2025
+                </p>
+                <p className="text-lg mb-6">
+                  Secure your property now at introductory prices with flexible payment terms
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <div className="text-center">
+                    <p className="text-sm text-white/80">3-Bedroom Duplex</p>
+                    <p className="text-3xl font-bold">₦65M</p>
+                    <p className="text-xs text-white/70">Save ₦5M</p>
+                  </div>
+                  <div className="hidden sm:block text-white/50 text-2xl">•</div>
+                  <div className="text-center">
+                    <p className="text-sm text-white/80">4-Bedroom Duplex</p>
+                    <p className="text-3xl font-bold">₦75M</p>
+                    <p className="text-xs text-white/70">Save ₦5M</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
 

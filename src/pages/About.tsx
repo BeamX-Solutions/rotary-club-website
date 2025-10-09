@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Users, TrendingUp, Shield, Target, Heart, Building2, CheckCircle } from 'lucide-react';
+import { Award, Users, TrendingUp, Shield, Target, Heart, Building2, CheckCircle, Briefcase, GraduationCap, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -55,7 +55,44 @@ const About = () => {
     'Quality construction with premium finishes',
     'Ready for occupation by end of 2025',
     'Excellent investment appreciation potential',
-    'Community-focused development'
+    'Community-focused development',
+    'Lifetime ownership with full asset control',
+    'Deed of Assignment with full documentation',
+    'Modern amenities and facilities',
+    'Strategic location near schools and malls'
+  ];
+
+  const projectDetails = [
+    {
+      icon: Building2,
+      title: '32 Units',
+      description: '3-Bedroom Terraced Duplexes with BQ'
+    },
+    {
+      icon: Briefcase,
+      title: '2 Units',
+      description: '4-Bedroom Semi-Detached Duplexes with BQ'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Completion',
+      description: 'February 2027 (Final delivery date)'
+    }
+  ];
+
+  const developmentTeam = [
+    {
+      name: 'RTN. Akinlabi Akintayo',
+      role: 'Development Originator & Technical Director',
+      company: 'TRABERG Construction and Development',
+      experience: 'Four-time RC Lekki Golden Service Projects Chair'
+    },
+    {
+      name: 'TRABERG Construction and Development',
+      role: 'Development Partner',
+      company: 'Architectural & Real Estate Development',
+      experience: 'Specializing in residential and commercial properties with comprehensive consultancy'
+    }
   ];
 
   return (
@@ -92,7 +129,7 @@ const About = () => {
                 <h2 className="text-2xl font-bold text-primary mb-4">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   To create exceptional living spaces that embody the Rotary values of service, integrity, and excellence, 
-                  while providing our members and investors with premium real estate opportunities in prime Lagos locations.
+                  while providing our members and investors with premium real estate opportunities in prime Lagos locations. We envision a community of sophisticated, ethical investors enjoying luxury living with strong financial returns.
                 </p>
               </CardContent>
             </Card>
@@ -105,7 +142,7 @@ const About = () => {
                 <h2 className="text-2xl font-bold text-primary mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   To deliver high-quality, affordable housing solutions that meet the needs of Rotary members and investors, 
-                  ensuring transparency, ethical practices, and exceptional value in every project we undertake.
+                  ensuring transparency, ethical practices, and exceptional value in every project we undertake. We are dedicated to creating sustainable investments with lasting community impact.
                 </p>
               </CardContent>
             </Card>
@@ -145,45 +182,98 @@ const About = () => {
         </div>
       </section>
 
-      {/* Project Timeline */}
+      {/* Project Details */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Project Timeline
+              Project Overview
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our journey in creating Rotary Wheels Court
+              A comprehensive development combining luxury, sustainability, and investment potential
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex gap-6">
-                  <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
-                      {milestone.year}
-                    </div>
-                    {index < milestones.length - 1 && (
-                      <div className="w-1 h-full bg-accent/30 mt-2" />
-                    )}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+            {projectDetails.map((detail, index) => (
+              <Card key={index} className="text-center hover:shadow-elegant transition-all">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <detail.icon className="w-8 h-8 text-accent" />
                   </div>
-                  <Card className="flex-1">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-primary mb-2">{milestone.title}</h3>
-                      <p className="text-muted-foreground">{milestone.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
+                  <h3 className="text-2xl font-bold text-accent mb-2">{detail.title}</h3>
+                  <p className="text-muted-foreground">{detail.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
+
+          <Card className="bg-primary text-white max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Location & Infrastructure</h3>
+              <p className="mb-4">
+                <strong>Marshy-Hills Estate, Addo Road, Ajah, Lekki, Lagos</strong>
+              </p>
+              <p className="text-white/90">
+                Strategically positioned in one of the best neighborhoods in Lekki-Ajah, central to shopping malls, schools, fuel stations, and all essential infrastructure. Features excellent road networks, reliable drainage systems, and constant access to utilities.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Development Team */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Development Team
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Led by experienced professionals committed to excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {developmentTeam.map((member, index) => (
+              <Card key={index} className="hover:shadow-elegant transition-all">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                    <Briefcase className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary mb-1">{member.name}</h3>
+                  <p className="text-accent font-semibold text-sm mb-2">{member.role}</p>
+                  <p className="text-sm text-muted-foreground mb-3">{member.company}</p>
+                  <p className="text-xs text-muted-foreground italic">{member.experience}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="mt-8 max-w-4xl mx-auto border-accent/20">
+            <CardContent className="p-8">
+              <h3 className="font-bold text-primary mb-3 flex items-center">
+                <Lightbulb className="w-5 h-5 mr-2 text-accent" />
+                Expertise & Services
+              </h3>
+              <p className="text-muted-foreground mb-3">
+                TRABERG Construction and Development specializes in:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-muted-foreground text-sm">
+                <li>• Property acquisition & development</li>
+                <li>• Design and build solutions</li>
+                <li>• Development appraisal</li>
+                <li>• Project monitoring</li>
+                <li>• Real estate consultancy</li>
+                <li>• Advisory services</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -197,7 +287,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {whyChooseUs.map((reason, index) => (
               <Card key={index} className="group hover:shadow-elegant transition-all duration-300">
                 <CardContent className="p-4 flex items-start space-x-3">
@@ -206,6 +296,34 @@ const About = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lifetime Ownership */}
+      <section className="py-16 bg-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-accent/30 shadow-luxury">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                    <Shield className="w-8 h-8 text-accent" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-primary ml-4">Lifetime Ownership</h2>
+                </div>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Rotary Wheels Court provides a lifetime opportunity to own beautifully designed, fully serviced properties 
+                  strategically located in high-demand areas. This ensures consistent rental income and the potential for long-term 
+                  value appreciation.
+                </p>
+                <p className="text-muted-foreground">
+                  Lifetime ownership allows you to diversify your portfolio while eliminating the limitations of leases, ensuring 
+                  you retain full control of your asset forever. It's a smart choice for investors seeking stability, profitability, 
+                  and enduring value in the competitive property market.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
