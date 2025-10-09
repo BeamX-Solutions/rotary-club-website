@@ -23,10 +23,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/images/rotary-logo.png" 
-                alt="Rotary Club of Lekki Golden" 
-                className="h-10 w-auto filter brightness-0 invert"
+              <img
+                src="/images/traberg-logo.jpg"
+                alt="Traberg - Architects, Builders, Construction Managers"
+                className="h-16 md:h-20 w-auto"
               />
             </div>
             <h3 className="text-xl font-bold text-accent">Rotary Wheels Court</h3>
