@@ -12,6 +12,7 @@ interface PropertyCardProps {
   originalPrice?: string;
   paymentPlan: string;
   monthlyPayment: string;
+  initialDeposit: string;
   image: string;
   features: string[];
   isOfferPrice?: boolean;
@@ -25,6 +26,7 @@ const PropertyCard = ({
   originalPrice,
   paymentPlan, 
   monthlyPayment, 
+  initialDeposit,
   image, 
   features,
   isOfferPrice = false
@@ -86,7 +88,7 @@ const PropertyCard = ({
               <span className="text-lg text-muted-foreground line-through">{originalPrice}</span>
             )}
           </div>
-          <div className="grid grid-cols-2 gap-2 text-sm">
+          <div className="grid grid-cols-3 gap-2 text-sm">
             <div className="flex items-center space-x-1">
               <Calendar className="h-4 w-4 text-accent" />
               <span>{paymentPlan}</span>
@@ -94,6 +96,10 @@ const PropertyCard = ({
             <div className="flex items-center space-x-1">
               <Banknote className="h-4 w-4 text-accent" />
               <span>{monthlyPayment}/month</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <Banknote className="h-4 w-4 text-accent" />
+              <span>{initialDeposit} Initial Deposit</span>
             </div>
           </div>
         </div>

@@ -54,8 +54,8 @@ const Hero = () => {
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
               <h3 className="text-lg font-semibold mb-3">Starting From</h3>
               <div className="flex items-baseline space-x-2">
-                <span className="text-3xl font-bold text-accent">₦65M</span>
-                <span className="text-white/80">3-Bedroom Duplex</span>
+                <span className="text-3xl font-bold text-accent">₦5M</span>
+                <span className="text-white/80">initial deposit for a 3-Bedroom Duplex</span>
               </div>
             </div>
           </div>

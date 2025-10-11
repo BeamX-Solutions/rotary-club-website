@@ -16,8 +16,9 @@ const Index = () => {
       bathrooms: 4,
       price: '₦65M',
       originalPrice: '₦70M',
-      paymentPlan: '16-18 Months',
+      paymentPlan: '18 Months',
       monthlyPayment: '₦3.3M',
+      initialDeposit: '₦5M',
       image: '/images/project-exterior.jpg',
       features: [
         'All Ensuite with Power Showers',
@@ -33,8 +34,9 @@ const Index = () => {
       bathrooms: 5,
       price: '₦75M',
       originalPrice: '₦80M',
-      paymentPlan: '16-18 Months',
-      monthlyPayment: '₦3.6M',
+      paymentPlan: '18 Months',
+      monthlyPayment: '₦3.7M',
+      initialDeposit: '₦8M',
       image: '/images/project-aerial.jpg',
       features: [
         'All Ensuite with Power Showers',
@@ -88,6 +90,7 @@ const Index = () => {
       <Hero />
 
       {/* Location Section */}
+      {/*
       <section className="py-12 bg-background border-b border-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center">
@@ -101,6 +104,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Rotary Values Section */}
       <section className="py-16 bg-background">
@@ -185,6 +189,7 @@ const Index = () => {
                 originalPrice={property.originalPrice}
                 paymentPlan={property.paymentPlan}
                 monthlyPayment={property.monthlyPayment}
+                initialDeposit={property.initialDeposit}
                 image={property.image}
                 features={property.features}
                 isOfferPrice={property.isOfferPrice}
