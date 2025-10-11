@@ -19,7 +19,7 @@ const Project = () => {
       bathrooms: 4,
       price: '₦65M',
       originalPrice: '₦70M',
-      paymentPlan: '16-18 Months',
+      paymentPlan: '18 Months',
       monthlyPayment: '₦3.3M',
       image: '/images/project-exterior.jpg',
       features: [
@@ -38,8 +38,8 @@ const Project = () => {
       bathrooms: 5,
       price: '₦75M',
       originalPrice: '₦80M',
-      paymentPlan: '16-18 Months',
-      monthlyPayment: '₦3.6M',
+      paymentPlan: '18 Months',
+      monthlyPayment: '₦3.7M',
       image: '/images/project-aerial.jpg',
       features: [
         'All Ensuite with Ante-room',

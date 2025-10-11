@@ -83,12 +83,12 @@ const Contact = () => {
     {
       name: 'RTN. OBINNA NWEKE',
       title: 'Principal Consultant, BEAMX Solution',
-      phones: ['+234 (0) 8164711076']
+      phones: ['+234 (0) 8164711076', '+1 (414) 350-6035']
     },
     {
       name: 'RTN. VICTOR ITOTOI',
       title: 'Membership Chair, RC Falomo',
-      phones: ['+234 (0) 8023209322', '+1 (414) 350-6035']
+      phones: ['+234 (0) 8023209322']
     },
     {
       name: 'RTN. AGNES',
@@ -105,7 +105,7 @@ const Contact = () => {
         { label: 'Off-Plan Price', value: '₦65M' },
         { label: 'Initial Deposit', value: '₦5M' },
         { label: 'Full Payment', value: '₦70M' },
-        { label: 'Payment Duration', value: '16-18 Months' },
+        { label: 'Payment Duration', value: '18 Months' },
         { label: 'Monthly Payment', value: '₦3.3M' },
         { label: 'Interest Rate', value: 'Zero Interest' },
         { label: 'Units Available', value: '32 Units' }
@@ -116,10 +116,10 @@ const Contact = () => {
       title: '4-Bedroom Duplex',
       details: [
         { label: 'Off-Plan Price', value: '₦75M' },
-        { label: 'Initial Deposit', value: '₦15M' },
+        { label: 'Initial Deposit', value: '₦8M' },
         { label: 'Full Payment', value: '₦80M' },
-        { label: 'Payment Duration', value: '16-18 Months' },
-        { label: 'Monthly Payment', value: '₦3.6M' },
+        { label: 'Payment Duration', value: '18 Months' },
+        { label: 'Monthly Payment', value: '₦3.7M' },
         { label: 'Interest Rate', value: 'Zero Interest' },
         { label: 'Units Available', value: '2 Units' }
       ]
@@ -143,7 +143,7 @@ const Contact = () => {
         'Bank: PROVIDUS BANK',
         'Account Number: 1308280039',
         'Account Name: ROTARY WHEEL\'S COURT',
-        'Payment Plans: 16-18 Months',
+        'Payment Plans: 18 Months',
         'Zero Interest Option Available'
       ]
     }

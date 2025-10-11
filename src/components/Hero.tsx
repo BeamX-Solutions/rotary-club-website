@@ -28,7 +28,7 @@ const Hero = () => {
                 Where luxury meets opportunity in the heart of Lekki
               </p>
               <p className="text-lg text-white/80 max-w-lg">
-                Premium real estate investment powered by RC Lekki Golden. Exclusive properties designed for modern investors with excellent rental income potential.
+                Exclusive residential community developed by Traberg Construction in partnership with the RC Lekki Golden designed for the Rotary community in Lagos.
               </p>
             </div>
 

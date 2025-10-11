@@ -12,7 +12,7 @@ const Footer = () => {
   const contacts = [
     { name: 'RTN. AGNES', phone: '+234 814 901 7989' },
     { name: 'RTN. BUSAYO OWAH', phone: '+234 703 497 0389' },
-    { name: 'RTN. OBINNA NWEKE', phone: '+234 816 471 1076' },
+    { name: 'RTN. OBINNA NWEKE', phone: '+1 (414) 350-6035' },
     { name: 'RTN. AKINLABI AKINTAYO', phone: '+234 809 843 4810' },
   ];
 
@@ -92,10 +92,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-primary-foreground/60">
-            © 2024 Rotary Club of Lekki Golden. All rights reserved.
+            © 2025 Traberg Construction. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 text-sm text-primary-foreground/60">
-            <span>Powered by RC Lekki Golden Service Project</span>
+            <span>Developed by BeamX Solutions</span>
           </div>
         </div>
       </div>
