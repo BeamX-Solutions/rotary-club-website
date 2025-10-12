@@ -18,7 +18,12 @@ import {
   Banknote,
   FileText,
   Building2,
-  DollarSign
+  DollarSign,
+  Navigation,
+  Download,
+  Award,
+  CheckCircle,
+  Info
 } from 'lucide-react';
 
 const Contact = () => {
@@ -330,6 +335,201 @@ const Contact = () => {
               </Card>
             </div>
           </div>
+
+          {/* Map Section */}
+          <section className="mb-16">
+            <Card className="shadow-luxury overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-primary flex items-center">
+                  <Navigation className="w-6 h-6 mr-2 text-accent" />
+                  Location Map
+                </CardTitle>
+                <p className="text-muted-foreground">
+                  Visit us at Marshy-Hills Estate, Addo Road, Ajah, Lekki
+                </p>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="w-full h-96 bg-secondary/20">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8392559618903!2d3.5789347!3d6.5116467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sAddo%20Road%2C%20Ajah%2C%20Lekki%2C%20Lagos!5e0!3m2!1sen!2sng!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Brochure Download Section */}
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-10 h-10 text-accent" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Project Brochures
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Download detailed information about Rotary Wheels Court. Choose from our comprehensive brochures to learn more about the project, investment opportunities, and payment options.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <Card className="group hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 flex flex-col">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <FileText className="w-6 h-6 text-accent" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-primary group-hover:text-accent transition-colors">
+                    Rotary Wheels Court - Master Brochure
+                  </CardTitle>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Comprehensive brochure featuring project overview, property specifications, amenities, payment plans, and investment highlights.
+                  </p>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="mb-6">
+                    <div className="flex gap-4 mb-4 text-xs text-muted-foreground">
+                      <span className="flex items-center">
+                        <FileText className="w-4 h-4 mr-1" />
+                        25 Pages
+                      </span>
+                      <span className="flex items-center">
+                        <Download className="w-4 h-4 mr-1" />
+                        5.1 MB
+                      </span>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm text-primary mb-2">Includes:</h4>
+                      <ul className="space-y-1">
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Complete project overview
+                        </li>
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Property specifications & floor plans
+                        </li>
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Amenities & facilities details
+                        </li>
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Investment benefits & payment plans
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <Button 
+                    variant="golden" 
+                    className="w-full mt-auto"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/brochures/rotary-wheels-court-brochure.pdf';
+                      link.download = 'Rotary-Wheels-Court-Brochure.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download PDF
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 flex flex-col">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Award className="w-6 h-6 text-accent" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-primary group-hover:text-accent transition-colors">
+                    Interior & Exterior Design
+                  </CardTitle>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Detailed showcase of the stunning interior finishes and exterior architecture featuring premium finishes and modern design elements.
+                  </p>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="mb-6">
+                    <div className="flex gap-4 mb-4 text-xs text-muted-foreground">
+                      <span className="flex items-center">
+                        <FileText className="w-4 h-4 mr-1" />
+                        27 Pages
+                      </span>
+                      <span className="flex items-center">
+                        <Download className="w-4 h-4 mr-1" />
+                        14.4 MB
+                      </span>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm text-primary mb-2">Includes:</h4>
+                      <ul className="space-y-1">
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Interior design showcases
+                        </li>
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Exterior architecture details
+                        </li>
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Premium finishes & materials
+                        </li>
+                        <li className="flex items-start text-xs text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 mr-2 text-accent mt-0.5 flex-shrink-0" />
+                          Modern design elements
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <Button 
+                    variant="golden" 
+                    className="w-full mt-auto"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/brochures/interior-exterior-design.pdf';
+                      link.download = 'Interior-Exterior-Design.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download PDF
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Info Box */}
+            <Card className="bg-accent/5 border-accent/20">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Info className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-primary mb-2">Need More Information?</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Download our brochures to get comprehensive details about the project, property specifications, investment opportunities, and payment plans. All documents are in PDF format and can be saved for future reference.
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Note:</strong> For the most current information, please contact our sales team or visit the project site.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
 
           {/* Pricing Information */}
           <section className="mb-16">
