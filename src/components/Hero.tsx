@@ -3,9 +3,41 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28">
+      {/* Custom Fonts */}
+      <style>{`
+        @font-face {
+          font-family: 'MicroSquare Bold';
+          src: url('/fonts/MicroSquareBold.woff2') format('woff2'),
+               url('/fonts/MicroSquareBold.woff') format('woff');
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: 'ExtendedCursive';
+          src: url('/fonts/ExtendedCursive.woff2') format('woff2'),
+               url('/fonts/ExtendedCursive.woff') format('woff');
+          font-style: italic;
+        }
+
+        .rotary-wheels-text {
+          font-family: 'MicroSquare Bold', sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .court-text {
+          font-family: 'ExtendedCursive', cursive;
+          font-style: italic;
+          font-size: 3.2em;
+          letter-spacing: 0.05em;
+          line-height: 1.1;
+        }
+      `}</style>
+
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -20,18 +52,26 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8 text-white">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Rotary Wheels
-                <span className="block text-accent">Court</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+              <div className="flex items-center gap-6 md:gap-8">
+                
+                {/* Text Section */}
+                <div>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight rotary-wheels-text">
+                    Rotary Wheels
+                  </h1>
+                  <p className="court-text text-accent text-xl md:text-2xl lg:text-5xl mt-2">
+                    Court
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed pt-4">
                 Where luxury meets opportunity in the heart of Lekki
               </p>
               <p className="text-lg text-white/80 max-w-lg">
                 Exclusive residential community developed by Traberg Construction in partnership with the RC Lekki Golden designed for the Rotary community in Lagos.
               </p>
             </div>
-
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">

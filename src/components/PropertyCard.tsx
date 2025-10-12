@@ -47,7 +47,7 @@ const PropertyCard = ({
           )}
           <div className="absolute top-4 right-4">
             <Badge variant="secondary" className="bg-white/90 text-primary">
-              Ready 2025
+              Ready 2027
             </Badge>
           </div>
         </div>
