@@ -87,7 +87,7 @@ const Contact = () => {
     },
     {
       name: 'RTN. OBINNA NWEKE',
-      title: 'Principal Consultant, BEAMX Solution',
+      title: 'Principal Consultant, BeamX Solutions',
       phones: ['+234 (0) 8164711076', '+1 (414) 350-6035']
     },
     {
@@ -466,7 +466,7 @@ const Contact = () => {
                       </span>
                       <span className="flex items-center">
                         <Download className="w-4 h-4 mr-1" />
-                        14.4 MB
+                        4 MB
                       </span>
                     </div>
                     
