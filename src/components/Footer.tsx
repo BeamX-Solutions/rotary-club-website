@@ -95,7 +95,7 @@ const Footer = () => {
             © 2025 Traberg Construction. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 text-sm text-primary-foreground/60">
-            <span>Developed by BeamX Solutions</span>
+            <a href="https://beamxsolutions.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline transition-colors">Developed by BeamX Solutions</a>
           </div>
         </div>
       </div>

@@ -66,7 +66,7 @@ const Hero = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed pt-4">
-                Where luxury meets opportunity in the heart of Lekki
+                Experience comfort, community, and modern living
               </p>
               <p className="text-lg text-white/80 max-w-lg">
                 Exclusive residential community developed by Traberg Construction in partnership with the RC Lekki Golden designed for the Rotary community in Lagos.
