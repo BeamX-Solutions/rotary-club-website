@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import WhatsAppFloat from "./components/WhatsappFloat";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import Index from "./pages/Index";
 import Project from "./pages/Project";
 import About from "./pages/About";

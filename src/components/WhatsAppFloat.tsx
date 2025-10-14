@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { X, Send } from 'lucide-react';
 
-const WhatsAppWidget = () => {
+const WhatsAppFloat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedContact, setSelectedContact] = useState(null);
 
@@ -201,4 +201,4 @@ const WhatsAppWidget = () => {
   );
 };
 
-export default WhatsAppWidget;
+export default WhatsAppFloat;
