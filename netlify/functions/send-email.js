@@ -9,7 +9,7 @@ exports.handler = async (event) => {
 
     const { data, error } = await resend.emails.send({
       from: 'info@beamxsolutions.com', // Updated sender email
-      to: ['ibehchimaobi98@gmail.com'], // As specified
+      to: ['ibehchimaobi98@gmail.com', 'obinnanweke@gmail.com'], // As specified
       subject: `New Interest Form Submission from ${name}`,
       html: `
         <h2>New Interest Form Submission</h2>
