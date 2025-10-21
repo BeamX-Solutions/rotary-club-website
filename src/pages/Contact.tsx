@@ -35,8 +35,9 @@ const Contact = () => {
     propertyType: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic form validation
@@ -48,21 +49,43 @@ const Contact = () => {
       return;
     }
 
-    // Here you would typically send the data to your backend
-    // For now, we'll just show a success message
-    toast({
-      title: "Interest Registered Successfully!",
-      description: "Our team will contact you within 24 hours.",
-    });
+    setIsSubmitting(true);
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      propertyType: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      toast({
+        title: "Interest Registered Successfully!",
+        description: "Our team will contact you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        propertyType: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error Sending Message",
+        description: "There was an error sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -271,8 +294,8 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" variant="golden" size="lg" className="w-full">
-                      Submit Interest
+                    <Button type="submit" variant="golden" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : 'Submit Interest'}
                     </Button>
                   </form>
                 </CardContent>
