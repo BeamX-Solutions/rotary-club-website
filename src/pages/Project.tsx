@@ -212,7 +212,7 @@ const Project = () => {
                     </Badge>
                   )}
                   <Badge className="absolute top-4 right-4 bg-white/90 text-primary">
-                    Ready 2025
+                    Ready 2027
                   </Badge>
                 </div>
 
